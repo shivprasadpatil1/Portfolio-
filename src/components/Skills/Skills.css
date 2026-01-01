@@ -1,0 +1,25 @@
+.skills-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(17, 17, 19, 0.986);
+  
+}
+
+.skills-section {
+  background-color: #111113;
+  min-height: 100vh;
+}
+
+/* sab images ek size ke box me fit karenge */
+.skill-icon {
+  width: 80px;   /* icon ka width */
+  height: 80px;  /* icon ka height */
+  object-fit: contain; /* image distort nahi hogi */
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto; /* center align */
+}
+
+.skill-icon:hover {
+  transform: scale(1.2);
+}
