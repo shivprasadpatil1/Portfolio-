@@ -70,7 +70,7 @@ function About() {
   rel="noopener noreferrer"
   className="btn btn-outline-info mt-3"
 >
-  View Internship Letter (PDF)
+  View Internship Letter
 </a>
 
               </div>
