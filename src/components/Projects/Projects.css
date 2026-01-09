@@ -1,5 +1,4 @@
 #projects{
-
     width: 100%;
     height:100%;
     min-height: 100vh;
@@ -30,46 +29,51 @@
 }
 
 .project-card {
-     width: 300px;   /* fix width */
-  height: 400px;
+   width: 300px;              /* 🔒 fixed width */
+  height: 420px;   
   background: #1c1c1c;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   transition: transform 0.3s;
+   flex-shrink: 0;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 .project-image {
-    object-fit: cover; 
-    height: 180px;
   width: 100%;
-  height: 180px;
+  height: 180px;          /* 🔒 fixed image height */
   object-fit: cover;
 }
 
 .project-content {
-  padding: 1rem;
+   padding: 15px;
   text-align: left;
 }
 
 .project-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .project-content p {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #aaa;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.projects-wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;              /* wrap on small screens */
+  justify-content: center;      /* center alignment */
 }
 
 .tech-stack {
-  font-size: 0.85rem;
-  color: #888;
+   font-size: 13px;
+  color: #00ffe1;
 }
 
 .buttons {
@@ -102,4 +106,12 @@
 
 .btn.code:hover {
   background: #555;
+}
+/* Mobile screen ke liye gap */
+@media (max-width: 768px) {
+  #projects .col-md-4 {
+    margin-bottom: 1.5rem; /* gap between cards */
+    display: flex;
+    justify-content: center;
+  }
 }

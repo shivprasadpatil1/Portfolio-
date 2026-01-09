@@ -5,6 +5,8 @@ import "./About.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCertificate, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import internshipLetter from "../../assets/internship-letter.pdf";
+
 function About() {
   return (
     <div id="about">
@@ -57,11 +59,20 @@ function About() {
                   Work Experience
                 </h4>
                 <p className="card-text mt-3">
-                  <strong>MERN Developer</strong> at Ishwarya bi technologies <br />
-                  <div className="text-info pt-2">
-                  <span className="text-info">1 Years Experience</span>
-                  </div>
-                </p>
+  <strong>MERN Developer Intern</strong> at Ishwarya BI Technologies <br />
+  <span className="text-info pt-2 d-block">
+    Internship duration: 11 months
+  </span>
+</p>
+<a
+  href={internshipLetter}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-outline-info mt-3"
+>
+  View Internship Letter (PDF)
+</a>
+
               </div>
             </div>
           </div>

@@ -1,17 +1,21 @@
 .footer-section {
   background: #111;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px 10px; /* 🔹 mobile padding fix */
 }
 
+/* Container */
 .footer-section .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1100px;
   margin: auto;
+  flex-wrap: wrap;        /* 🔹 IMPORTANT */
+  text-align: center;
 }
 
+/* Portfolio Brand */
 .footer-brand h2 {
   font-size: 1.5rem;
   background: linear-gradient(to right, rgb(64, 188, 197), white);
@@ -21,16 +25,20 @@
   margin: 0;
 }
 
+/* Contact Info */
 .footer-contact {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
+  flex-wrap: wrap;        /* 🔹 IMPORTANT */
+  justify-content: center;
 }
 
 .footer-contact p {
   margin: 0;
   font-size: 0.95rem;
   color: #ccc;
+  word-break: break-word; /* 🔹 email overflow fix */
 }
 
 .footer-contact p:hover {
@@ -42,7 +50,7 @@
   color: #5a9494;
 }
 
-
+/* Social Icons */
 .footer-social {
   display: flex;
   gap: 15px;
@@ -57,4 +65,21 @@
 .social-icon:hover {
   color: #ffffff;
   transform: scale(1.2);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-section .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .separator {
+    display: none; /* 🔹 hide | on mobile */
+  }
 }

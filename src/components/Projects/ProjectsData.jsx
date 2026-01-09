@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";  
 import "../../components/Projects/Projects.css";
-import projectEcommerce from '../../assets/ecommerce.png'
-import projectPortfolio from '../../assets/portfolio2.jpg'
+import projectEcommerce from '../../assets/e-commerce.jpg'
+import projectPortfolio from '../../assets/portfolio.jpg'
 import projectCodewonders from '../../assets/codewonders.jpg'
 
 function ProjectsData() {
@@ -34,6 +34,7 @@ function ProjectsData() {
       liveLink: "https://example.com",
       githubLink: "https://github.com/shivprasadpatil1/CodeWonders.git",
     },
+
   ];
 
   return (
@@ -48,11 +49,13 @@ function ProjectsData() {
             modern applications. Always eager to learn new technologies and
             improve my skills.
           </p>
+          <div className="projects-wrapper mt-4">
         {projectData.map((p, index) => (
-          <div key={index} className="col-md-4">
+        
             <ProjectCard key={index} {...p} />
-          </div>
+         
         ))}
+        </div>
       </div>
     </div>
     </div>

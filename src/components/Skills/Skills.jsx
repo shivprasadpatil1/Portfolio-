@@ -8,53 +8,53 @@ import react from '../../assets/react.svg'
 import bootstrap from '../../assets/bootstrap.png'
 import git from '../../assets/git.png'
 import vs from '../../assets/vs.png'
-
+import tailwind from '../../assets/tailwind.svg'
+import typescript from '../../assets/typescript.png'
+import postman from '../../assets/postman.png'
+import nodejs from '../../assets/nodejs.png'
+import express from '../../assets/express.png'
+import mongodb from '../../assets/mongodb.png'
 
 function Skills() {
+
+  const skills = [
+    { name: "HTML5", icon: html },
+    { name: "CSS3", icon: css },
+    { name: "JavaScript", icon: js },
+    { name: "TypeScript", icon: typescript },
+    { name: "React", icon: react },
+    { name: "Next.js", icon: next },
+    { name: "Bootstrap", icon: bootstrap },
+    { name: "Tailwind", icon: tailwind },
+    { name: "Node.js", icon: nodejs },
+    { name: "Express.js", icon: express },
+    { name: "MongoDB", icon: mongodb },
+    { name: "Git", icon: git },
+    { name: "VS Code", icon: vs },
+    { name: "Postman", icon: postman }
+
+  ];
+
   return (
     <div id="skills" className="skills-section">
-      <div className="container pt-5">
-        <div className="row mt-4 ">
-          <h2 className="text-white text-center">My <span style={{ color: "#5a9494ff" }}>Skills</span></h2>
-          <p className="text-light text-center my-2 mb-5">
+      <div className="skills-grid-container">
+        <h2 className="skills-title">My <span className="highlight">Skills</span> & Technologies</h2>
+            <p className="text-para text-center my-2 mb-5">
             Here are the technologies I work with.
           </p>
-
-
-     {/* Row 1 */}
-        <div className="row mb-4 justify-content-center">
-          <div className="col-4 col-md-2 mb-3">
-            <img src={html} alt="HTML5" className="img-fluid skill-icon" />
-          </div>
-          <div className="col-4 col-md-2 mb-3">
-            <img src={css} alt="CSS3" className="img-fluid skill-icon" />
-          </div>
-          <div className="col-4 col-md-2 mb-3">
-            <img src={js} alt="JavaScript" className="img-fluid skill-icon" />
-          </div>
-          <div className="col-4 col-md-2 mb-3">
-            <img src={react} alt="React" className="img-fluid skill-icon" />
-          </div>
-          <div className="col-4 col-md-2 mb-3">
-            <img src={next} alt="React" className="img-fluid skill-icon" />
-          </div>
-        </div>
-
-
-        {/* Row 2 */}
-        <div className="row justify-content-center">
-          <div className="col-4 col-md-2 mb-3">
-            <img src={bootstrap} alt="Bootstrap" className="img-fluid skill-icon" />
-          </div>
-          
-          <div className="col-4 col-md-2 mb-3">
-            <img src={vs} alt="VS Code" className="img-fluid skill-icon" />
-          </div>
-          <div className="col-4 col-md-2 mb-3">
-            <img src={git} alt="Git" className="img-fluid skill-icon" />
-          </div>
-        </div>
-
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div key={index} className="skill-grid-item">
+              {skill.icon ? (
+                <>
+                  <img src={skill.icon} alt={skill.name} className="skill-grid-icon" />
+                  <p className="skill-grid-name">{skill.name}</p>
+                </>
+              ) : (
+                <div className="empty-cell"></div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
