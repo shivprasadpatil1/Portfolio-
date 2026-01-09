@@ -13,7 +13,7 @@ function ProjectsData() {
       description:
         "A full-stack e-commerce application with authentication, product management, and payment integration.",
       techStack: ["MongoDB", "Express.js", "Node.js", "React.js", "Bootstrap"],
-      liveLink: "https://example.com",
+      isLive: false,
       githubLink: "https://github.com/shivprasadpatil1/E-Commerce.git",
     },
     {
@@ -22,7 +22,7 @@ function ProjectsData() {
       description:
         "Personal portfolio website showcasing projects, skills, and contact information.",
       techStack: ["React", "Bootstrap", "css"],
-      liveLink: "https://example.com",
+      liveLink: "https://example.comhttps://wondrous-pie-f5f764.netlify.app/",
       githubLink: "https://github.com/shivprasadpatil1/Portfolio-.git",
     },
     
@@ -31,7 +31,7 @@ function ProjectsData() {
       title: "Code Wonders",
       description: "Code Wonders is a full-stack web application developed as a company project, featuring role-based access, CRUD operations, and API-driven architecture",
       techStack: ["MongoDB", "Express.js", "Node.js", "React.js", "Bootstrap"],
-      liveLink: "https://example.com",
+      isLive: false,
       githubLink: "https://github.com/shivprasadpatil1/CodeWonders.git",
     },
 

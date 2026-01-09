@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "./Projects.css";
+import ProjectComingSoon from "../ProjectComingSoon.jsx";
 
-
-function ProjectCard({ image, title, description, techStack, liveLink, githubLink }) {
+function ProjectCard({ image, title, description, techStack, liveLink, githubLink, isLive }) {
   const [show, setShow] = useState(false);
-
+const [showComingSoon, setShowComingSoon] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -32,14 +32,19 @@ function ProjectCard({ image, title, description, techStack, liveLink, githubLin
           <p className="tech-stack">Tech stack: {techStack.join(", ")}</p>
 
           <div className="buttons d-flex justify-content-center gap-3 mt-3">
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn live"
-            >
-              Live Preview
-            </a>
+           <button
+  className="btn live"
+  onClick={() => {
+    if (isLive) {
+      window.open(liveLink, "_blank");
+    } else {
+      setShowComingSoon(true);
+    }
+  }}
+>
+  Live Preview
+</button>
+
             <a
               href={githubLink}
               target="_blank"
@@ -51,6 +56,12 @@ function ProjectCard({ image, title, description, techStack, liveLink, githubLin
           </div>
         </Modal.Body>
       </Modal>
+
+      <ProjectComingSoon
+  show={showComingSoon}
+  onHide={() => setShowComingSoon(false)}
+  title={title}
+/>
     </>
   );
 }

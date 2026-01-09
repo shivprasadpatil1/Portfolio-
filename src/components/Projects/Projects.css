@@ -115,3 +115,25 @@
     justify-content: center;
   }
 }
+
+.coming-soon-ui {
+  padding: 35px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+  border-top-color: #000;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
