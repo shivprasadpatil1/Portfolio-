@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 import "../../components/Projects/Projects.css";
 import projectEcommerce from '../../assets/e-commerce.jpg'
 import projectPortfolio from '../../assets/portfolio.jpg'
-import projectCodewonders from '../../assets/codewonders.jpg'
+import projectCodewonders from '../../assets/codewonders.png'
 
 function ProjectsData() {
   const projectData = [
